@@ -298,7 +298,7 @@ function Index() {
         className="py-32 px-3 md:py-28 md:px-24 lg:py-40 lg:px-56"
         style={{
           clipPath: 'polygon(0 10%, 100% 0%, 100% 90%, 0 100%)',
-          backgroundColor: 'rgba(0, 0, 0, 0.1)',
+          backgroundColor: '#fbfbfb',
         }}
       >
         <h2 className="text-3xl sm:text-4xl text-dark-gray font-bold">
