@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `AS 共乘`,
     description: `以更輕鬆、快速的方式往返中研院及鄰近捷運站`,
-    siteUrl: '',
+    siteUrl: 'http://as-carpooling.netlify.com',
     image: ``,
   },
   plugins: [
