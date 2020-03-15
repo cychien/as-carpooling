@@ -52,7 +52,7 @@ function Index() {
             往返中研院及鄰近捷運站
           </h1>
           <div className="flex items-center mt-10 mx-2 sm:mx-0">
-            <IosDownloadLink styles="mr-4" />
+            <IosDownloadLink styles="mr-1 sm:mr-4" />
             <AndroidDownloadLink />
           </div>
           <div className="mt-5 mx-2 sm:mx-0">
@@ -65,13 +65,16 @@ function Index() {
         <div className="absolute top-12 right-0 xl:w-auto lg:w-3/5 hidden sm:block lg:hidden mobileHero">
           <img src={mobileHeroImg} alt="Hero image" />
         </div>
-        <div className="absolute left-0 w-auto" style={{ top: '60vh' }}>
+        <div
+          className="absolute left-0 w-auto hidden sm:block"
+          style={{ top: '60vh' }}
+        >
           <img src={windUpImg} alt="Wind" />
         </div>
       </div>
 
       <div
-        className="flex absolute w-full"
+        className="flex static sm:absolute w-full"
         style={{ top: '80vh' }}
         id="role-switch"
       >
@@ -171,7 +174,7 @@ function Index() {
         </button>
       </div>
 
-      <div className="relative" style={{ marginTop: '60vh' }}>
+      <div className="relative section1">
         <div className="absolute w-auto" style={{ zIndex: -1 }}>
           <img src={bgUpImg} alt="bg" />
         </div>
@@ -224,14 +227,14 @@ function Index() {
         </div>
       </div>
 
-      <div className="mt-56 block lg:flex mx-auto relative">
+      <div className="mt-32 sm:mt-56 block lg:flex mx-auto relative">
         <div
-          className="absolute right-0 w-auto"
+          className="absolute right-0 w-auto hidden sm:block"
           style={{ top: '-135px', zIndex: -1 }}
         >
           <img src={bgDownImg} alt="bg" />
         </div>
-        <div className="flex justify-center lg:block lg:ml-40 lg:mr-28 appScreen w-auto">
+        <div className="flex justify-center lg:block lg:ml-40 lg:mr-28 appScreen w-auto hidden lg:block">
           <img src={appScreenImg} alt="demo" />
         </div>
         <div className="mt-0 mb-16 lg:mt-16 lg:mb-0">
@@ -283,13 +286,16 @@ function Index() {
             </div>
           </div>
         </div>
+        <div className="flex justify-center lg:block lg:ml-40 lg:mr-28 appScreen w-auto block lg:hidden">
+          <img src={appScreenImg} alt="demo" className="block lg:hidden" />
+        </div>
         <div className="absolute windDown hidden sm:block">
           <img src={windDownImg} alt="wind" />
         </div>
       </div>
 
       <div
-        className="py-20 px-3 md:py-28 md:px-24 lg:py-40 lg:px-56"
+        className="py-32 px-3 md:py-28 md:px-24 lg:py-40 lg:px-56"
         style={{
           clipPath: 'polygon(0 10%, 100% 0%, 100% 90%, 0 100%)',
           backgroundColor: 'rgba(0, 0, 0, 0.1)',
@@ -301,7 +307,7 @@ function Index() {
           我們都在等你！
         </h2>
         <div className="flex items-center mt-10">
-          <IosDownloadLink styles="mr-4" />
+          <IosDownloadLink styles="mr-1 sm:mr-4" />
           <AndroidDownloadLink />
         </div>
       </div>
