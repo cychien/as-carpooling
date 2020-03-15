@@ -11,7 +11,7 @@ function MainLayoutView({ children }) {
           <div>
             <a
               href="mailto:"
-              className="text-dark-gray border-gray p-2 rounded font-medium text-sm border-2"
+              className="text-gray border-gray p-2 rounded font-medium text-sm border-2"
             >
               聯絡我們
             </a>

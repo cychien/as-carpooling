@@ -237,7 +237,7 @@ function Index() {
         <div className="flex justify-center lg:block lg:ml-40 lg:mr-28 appScreen w-auto hidden lg:block">
           <img src={appScreenImg} alt="demo" />
         </div>
-        <div className="mt-0 mb-16 lg:mt-16 lg:mb-0">
+        <div className="mt-0 mb-6 lg:mt-16 lg:mb-0">
           <h2 className="text-dark-gray font-bold text-3xl text-center lg:text-left">
             如何使用
           </h2>
@@ -312,16 +312,16 @@ function Index() {
         </div>
       </div>
 
-      <div className="flex justify-end items-center mt-8 mb-6">
+      <div className="flex justify-end items-center mt-8 mb-0">
         <Logo />
         <a href="/" className="ml-3 text-dark-gray">
           關於我們
         </a>
-        <a href="mailto:" className="ml-3 mr-3 text-dark-gray">
+        <a href="mailto:" className="ml-3 text-dark-gray">
           聯絡我們
         </a>
       </div>
-      <div className="text-gray text-right">© 2020 AS 共乘.</div>
+      <div className="text-gray text-right">© 2020 AS 共乘</div>
       <div className="text-gray text-right mb-2">
         Icons made by{' '}
         <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
