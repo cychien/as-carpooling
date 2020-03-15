@@ -1,0 +1,74 @@
+//@import '../../assets/stylesheets/abstracts/variables';
+
+.main-layout {
+  &__wrapper {
+    width: 100%;
+  }
+  &__header {
+    background-color: #fff;
+
+    display: flex;
+    @media (min-width: 576px) {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 60px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 576px) {
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 24px 30px;
+    }
+  }
+  &__name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    @media (min-width: 576px) {
+      font-size: 40px;
+      letter-spacing: 4px;
+      word-spacing: 10px;
+    }
+    @media (max-width: 576px) {
+      position: relative;
+      right: -5px;
+    }
+  }
+  &__avatar {
+    border-radius: 50%;
+    @media (min-width: 576px) {
+      // margin-top: 10px;
+      // height: 40px;
+      // width: 40px;
+      display: none !important;
+    }
+    @media (max-width: 576px) {
+      height: 36px;
+      width: 36px;
+      position: relative;
+      top: 1px;
+    }
+  }
+  &__menu {
+    position: relative;
+    @media (min-width: 576px) {
+      display: none;
+    }
+  }
+  &__menu-icon {
+    color: #707070;
+  }
+  &__select {
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0px 3px 6px rgba(#000, 0.16);
+    z-index: 1;
+    padding: 10px 0;
+    border-radius: 5px;
+  }
+  &__select-option {
+    padding: 10px 20px;
+    white-space: nowrap;
+    font-size: 16px;
+  }
+}
