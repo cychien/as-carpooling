@@ -24,7 +24,7 @@ module.exports = {
         short_name: `AS 共乘`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#306060`,
+        theme_color: `#2D74BB`,
         display: `minimal-ui`,
         //icon: `src/assets/images/favicon.png`, // This path is relative to the root of the site.
       },
