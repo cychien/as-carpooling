@@ -25,11 +25,7 @@ function SEO({ title, description, image, pathname, isArticle }) {
 
   return (
     <>
-      <Helmet
-        title={seo.title}
-        titleTemplate="%s | Justin Chien"
-        defaultTitle="Justin Chien's Blog"
-      >
+      <Helmet title={seo.title} titleTemplate="AS 共乘" defaultTitle="AS 共乘">
         <html lang="zh-Hant" />
         <meta name="description" content={seo.description} />
         <meta name="image" content={seo.image} />
