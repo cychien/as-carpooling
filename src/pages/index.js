@@ -56,10 +56,10 @@ function Index() {
             <AndroidDownloadLink />
           </div>
           <div className="mt-5 mx-2 sm:mx-0">
-            <img src={asImg} alt="中央研究院" />
+            <img src={asImg} alt="中央研究院" style={{ width: '130px' }} />
           </div>
         </div>
-        <div className="absolute top-0 right-0 xl:w-auto lg:w-3/5 hidden lg:block">
+        <div className="absolute top-0 right-0 xl:w-3/5 lg:w-3/5 hidden lg:block">
           <img src={heroImg} alt="Hero image" />
         </div>
         <div className="absolute top-12 right-0 xl:w-auto lg:w-3/5 hidden sm:block lg:hidden mobileHero">
@@ -67,7 +67,7 @@ function Index() {
         </div>
         <div
           className="absolute left-0 w-auto hidden sm:block"
-          style={{ top: '60vh' }}
+          style={{ top: '70vh' }}
         >
           <img src={windUpImg} alt="Wind" />
         </div>
@@ -75,7 +75,7 @@ function Index() {
 
       <div
         className="flex static sm:absolute w-full"
-        style={{ top: '80vh' }}
+        style={{ top: '105vh' }}
         id="role-switch"
       >
         <button
@@ -234,7 +234,7 @@ function Index() {
         >
           <img src={bgDownImg} alt="bg" />
         </div>
-        <div className="flex justify-center lg:block lg:ml-40 lg:mr-28 appScreen w-auto hidden lg:block">
+        <div className="flex justify-center lg:block lg:ml-48 lg:mr-24 appScreen w-auto hidden lg:block">
           <img src={appScreenImg} alt="demo" />
         </div>
         <div className="mt-0 mb-6 lg:mt-16 lg:mb-0">

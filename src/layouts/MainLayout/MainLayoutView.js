@@ -5,7 +5,7 @@ import Logo from '../../components/Logo'
 function MainLayoutView({ children }) {
   return (
     <div>
-      <Headroom>
+      <div>
         <div className="px-2 sm:px-10 py-5 flex justify-between items-center ">
           <Logo />
           <div>
@@ -17,7 +17,7 @@ function MainLayoutView({ children }) {
             </a>
           </div>
         </div>
-      </Headroom>
+      </div>
       {children}
     </div>
   )
