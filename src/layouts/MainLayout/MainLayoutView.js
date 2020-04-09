@@ -8,10 +8,10 @@ function MainLayoutView({ children }) {
       <div>
         <div className="px-2 sm:px-10 py-5 flex justify-between items-center ">
           <Logo />
-          <div>
+          <div style={{ zIndex: 9999 }}>
             <a
               href="mailto:"
-              className="text-gray border-gray p-2 rounded font-medium text-sm border-2"
+              className="text-gray border-gray p-2 rounded font-medium text-sm border-2 cursor-pointer hover:bg-gray-100"
             >
               聯絡我們
             </a>

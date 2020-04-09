@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import MainLayout from '../layouts/MainLayout'
 import SEO from '../components/SEO'
 import Logo from '../components/Logo'
@@ -22,6 +22,29 @@ import DriverIcon from '../assets/icons/DriverIcon'
 import cx from 'classnames'
 
 function Index() {
+  const fetchUrl = 'http://localhost:3000'
+
+  /*
+  useEffect(() => {
+    fetch(fetchUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        query: '{allOverviews{carbon_reduction, complete_drivings}}',
+      }),
+    })
+      .then(res => res.json())
+      .then(res => res.data.allOverviews[0])
+      .then(res => {
+        const completeDrivings = document.getElementById('completeDrivings')
+        const carbonReduction = document.getElementById('carbonReduction')
+        completeDrivings.innerHTML = res.complete_drivings
+        carbonReduction.innerHTML = res.carbon_reduction
+      })
+      .catch(err => console.log(err))
+  }, [])
+  */
+
   const [role, setRole] = useState('rider')
   const valueProp1Title = role === 'rider' ? '交通時間短' : '媒合快速'
   const valueProp1Desc =
@@ -59,10 +82,10 @@ function Index() {
             <img src={asImg} alt="中央研究院" style={{ width: '130px' }} />
           </div>
         </div>
-        <div className="absolute top-0 right-0 xl:w-3/5 lg:w-3/5 hidden lg:block">
+        <div className="absolute top-0 right-0 xl:w-3/5 lg:w-3/5 hidden lg:block hero-img">
           <img src={heroImg} alt="Hero image" />
         </div>
-        <div className="absolute top-12 right-0 xl:w-auto lg:w-3/5 hidden sm:block lg:hidden mobileHero">
+        <div className="absolute top-12 right-0 xl:w-auto lg:w-3/5 hidden sm:hidden lg:hidden mobileHero">
           <img src={mobileHeroImg} alt="Hero image" />
         </div>
         <div
@@ -294,21 +317,62 @@ function Index() {
         </div>
       </div>
 
+      <div className="container flex flex-col sm:flex-row m-auto my-24">
+        <div className="flex-auto flex items-center flex-col separator mb-12 sm:mb-0">
+          <div
+            className="relative text-2xl"
+            style={{ color: 'rgba(0, 0, 0, 0.5)' }}
+          >
+            <div className="statistics-deco"></div>
+            已完成載運趟數
+          </div>
+          <div style={{ fontSize: '5rem', color: '#255F99' }}>
+            <span id="completeDrivings">84</span>
+            <span
+              style={{ fontSize: '2rem', color: '#999', marginLeft: '12px' }}
+            >
+              趟
+            </span>
+          </div>
+        </div>
+        <div className="flex-auto flex items-center flex-col">
+          <div
+            className="relative text-2xl"
+            style={{ color: 'rgba(0, 0, 0, 0.5)' }}
+          >
+            <div className="statistics-deco"></div>
+            已達成減碳量
+          </div>
+          <div style={{ fontSize: '5rem' }}>
+            <span style={{ color: '#255F99' }} id="carbonReduction">
+              12
+            </span>
+            <span
+              style={{ fontSize: '2rem', color: '#999', marginLeft: '12px' }}
+            >
+              kg
+            </span>
+          </div>
+        </div>
+      </div>
+
       <div
-        className="py-32 px-3 md:py-28 md:px-24 lg:py-40 lg:px-56"
+        className="py-32 px-3 md:py-28 lg:py-40"
         style={{
           clipPath: 'polygon(0 10%, 100% 0%, 100% 90%, 0 100%)',
-          backgroundColor: '#fbfbfb',
+          backgroundColor: '#ebebeb',
         }}
       >
-        <h2 className="text-3xl sm:text-4xl text-dark-gray font-bold">
-          準備好試試不一樣的交通方式了嗎？
-          <br />
-          我們都在等你！
-        </h2>
-        <div className="flex items-center mt-10">
-          <IosDownloadLink styles="mr-1 sm:mr-4" />
-          <AndroidDownloadLink />
+        <div className="container m-auto">
+          <h2 className="text-3xl sm:text-4xl text-dark-gray font-bold">
+            準備好試試不一樣的交通方式了嗎？
+            <br />
+            我們都在等你！
+          </h2>
+          <div className="flex items-center mt-10">
+            <IosDownloadLink styles="mr-1 sm:mr-4" />
+            <AndroidDownloadLink />
+          </div>
         </div>
       </div>
 
